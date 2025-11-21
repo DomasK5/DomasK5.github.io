@@ -74,7 +74,7 @@ h6
     font-family: Courier, 'Courier New', monospace !important;
 }
 
-p
+p, li
 {
     font-size: 18px !important;
     color: #D8BFD8 !important;
@@ -199,4 +199,79 @@ section .section-title, .section .section-title{
 
 .service-item:hover{
     box-shadow: 0 0 15px #D8BFD8, 0 0 30px #D8BFD8 !important;
+}
+
+.education-details ul li::marker{
+    content: '✝ ' !important;
+}
+
+ol{
+    counter-reset: crosess;
+    list-style: none;
+}
+
+ol li{
+    counter-increment: crosess;
+}
+
+ol li::before{
+    content: counters(crosess, '.') ' ✝ ';
+    color: #D8BFD8 !important;
+    font-family: Courier, 'Courier New', monospace !important;
+    font-weight: bold !important;
+}
+
+.certification-section h4{
+    margin-bottom: 0 !important;
+}
+
+.certification-section {
+    position: relative; 
+}
+
+.bi-patch-check {
+    position: absolute !important;
+    bottom: 15px !important; 
+    left: 10px !important;   
+    z-index: 10;
+}
+
+.cert-provider{
+    margin-left: 40px !important;
+}
+
+.service-table{
+    display: flex !important;
+    justify-content: center !important;
+    padding-top: 50px !important;
+}
+
+.service-table table{
+    border-collapse: collapse !important;
+}
+
+.service-table th{
+    border: 2px solid #FF00FF !important;
+    padding: 10px 20px !important;
+    background-color: #FF00FF !important;
+    color: #000000 !important;
+    text-align: center !important;
+    font-weight: bold !important;
+    font-family: Vivaldi, 'Courier New', monospace !important;
+    font-size: 20px !important;
+}
+
+.service-table td{
+    border: 2px solid #DA70D6 !important;
+    padding: 10px !important;
+    background-color: #00000F !important;
+    color: #D8BFD8 !important;
+    text-align: center !important;
+    font-family: Vivaldi, 'Courier New', monospace !important;
+    font-size: 18px !important;
+}
+
+.service-table tr:hover:not(:first-child) td{
+    background-color: #31006d !important;
+    cursor: pointer;
 }
