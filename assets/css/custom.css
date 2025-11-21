@@ -1,0 +1,191 @@
+.cert-details
+{
+    font-family: Courier, 'Courier New', monospace !important;
+}
+
+h1
+{
+    font-size: 36px !important;
+    color: #FF00FF !important;
+    font-weight: bold !important;
+    line-height: 1.5 !important;
+    letter-spacing: 1.2 !important;
+    font-family: Courier, 'Courier New', monospace !important;
+}
+
+h2
+{
+    font-size: 30px !important; 
+    color: #FF00FF !important;
+    font-weight: bold !important;
+    line-height: 1.5 !important;
+    letter-spacing: 1.8 !important;
+    font-family: Courier, 'Courier New', monospace !important;
+}
+
+h3
+{
+    font-size: 24px !important; 
+    color: #DA70D6 !important;
+    font-weight: bold !important;
+    line-height: 1.5 !important;
+    letter-spacing: 1.2 !important;
+    font-family: Courier, 'Courier New', monospace !important;
+}
+
+h4
+{
+    font-size: 20px !important;
+    color: #DA70D6 !important;
+    font-weight: bold !important;
+    line-height: 1.5 !important;
+    letter-spacing: 1.2 !important;
+    font-family: Courier, 'Courier New', monospace !important;
+}
+
+h5
+{
+    font-size: 16px !important;
+    color: #D8BFD8 !important;
+    font-weight: bold !important;
+    line-height: 1.5 !important;
+    letter-spacing: 1.2 !important;
+    font-family: Courier, 'Courier New', monospace !important;
+}
+
+h6
+{
+    font-size: 14px !important;
+    color: #D8BFD8 !important;
+    font-weight: bold !important;
+    line-height: 1.5 !important;
+    letter-spacing: 1.2 !important;
+    font-family: Courier, 'Courier New', monospace !important;
+}
+
+p
+{
+    font-size: 18px !important;
+    color: #D8BFD8 !important;
+    line-height: 1.6 !important;
+    letter-spacing: 1.2 !important;
+    font-family: Courier, 'Courier New', monospace !important;
+}
+
+.submit-btn, .header-toggle, .scroll-top, .footer .social-links a{
+    background-color: #FF00FF !important;
+}
+
+.submit-btn:hover, .twitter:hover, .facebook:hover, .linkedin:hover, .instagram:hover,
+.google-plus:hover, .header-toggle:hover, .scroll-top:hover, .footer .social-links a:hover{
+    background-color: #DA70D6 !important;
+    box-shadow: 0 0 10px #DA70D6, 0 0 20px #DA70D6 !important;
+}
+
+.submit-btn:active{
+    background-color: #00000F !important;
+}
+
+.submit-btn span{
+    font-family: 'Courier New', Courier, monospace !important;
+    font-weight: bold !important;
+}
+
+.navmenu ul li a, .navicon{
+    color:#DA70D6 !important;
+}
+
+.navmenu ul li a:hover{
+    color:#D8BFD8 !important;
+}
+
+.navmenu a:hover .navicon{
+    color:#FF00FF !important;
+}
+
+.credits a{
+    color:#FF00FF !important;
+}
+
+
+/* del services linku pagalvor, nes jei juos palieki reikia irgi style pakeist 3 uzd */
+
+.resume .container, .portfolio .container, .services .container, .contact .container{
+    border: 5px solid #FF00FF !important;
+    box-shadow: 0 0 50px #DA70D6, 0 0 50px #DA70D6 !important;
+    border-radius: 20px !important;
+    padding: 50px !important;
+}
+
+.about .container{
+    border: 5px solid #FF00FF !important;
+    box-shadow: 0 0 50px #DA70D6, 0 0 50px #DA70D6 !important;
+    border-radius: 20px !important;
+}
+
+.about, .portfolio, .services, .resume, .contact, .footer{
+    overflow: visible !important;
+}
+
+.about, .about .intro-header, .about .main-content-wrapper, .about .content-area .story-block{
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding: 0 !important;
+}
+
+.about .container .row .col-lg-10{
+    padding: 50px !important;
+}
+
+.about .container .row .col-lg-10 .intro-header{
+    padding-bottom: 30px !important;
+}
+
+.contact, .services, .portfolio, .resume{
+    padding: 0 !important;
+}
+
+section, .section{
+    padding-bottom: 0 !important;
+}
+
+section .section-title, .section .section-title{
+    margin-top: 300px !important;
+}
+
+.bi-geo-alt, .timeline-year, .graduation-year, .portfolio-category{
+    color: #FF00FF !important;
+}
+
+.status-indicator{
+    background-color: #FF00FF !important;
+}
+
+.bi-briefcase-fill, .bi-mortarboard-fill, .bi-laptop, .bi-patch-check, .bi-palette, .bi-code-slash, .bi-phone,
+.bi-chat-dots, .bi-envelope-open, .bi-telephone-outbound, .bi-geo-alt-fill{
+    color: #DA70D6 !important;
+}
+.section-title h2::after, .icon-wrapper, .degree-icon, .service-icon, .info-icon{
+    background-color: #d8bfd855 !important;
+}
+
+.education-card {
+    box-shadow: 0 4px 10px rgba(218, 112, 214, 0.4) !important; 
+}
+
+.resume .education-skills .education-grid .education-card.primary::before{
+    background: #D8BFD8 !important;
+}
+
+.resume .professional-journey .experience-timeline .timeline-item .timeline-dot{
+    background: #D8BFD8 !important;
+    box-shadow: 0 0 0 3px color-mix(in srgb, #D8BFD8, transparent 80%);
+}
+
+.resume .professional-journey .experience-timeline::before{
+    background: color-mix(in srgb, #D8BFD8, transparent 80%) !important;
+}
+
+.service-item:hover{
+    box-shadow: 0 0 15px #D8BFD8, 0 0 30px #D8BFD8 !important;
+}
