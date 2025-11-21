@@ -1,3 +1,14 @@
+.service-item .service-content video,
+.service-item .service-content iframe {
+    width: 100% !important;
+    height: 100% !important;
+    border: none !important; 
+}
+
+.service-item .service-content {
+    min-height: 250px; 
+}
+
 .cert-details
 {
     font-family: Courier, 'Courier New', monospace !important;
