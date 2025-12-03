@@ -473,3 +473,26 @@ section:nth-of-type(5) .container {
     top: 25px;
     width: 100px;
 }
+
+.contact .form-wrapper .form-group input{
+    border-color: #DA70D6 !important;
+}
+
+.contact .form-wrapper .form-group input:focus{
+    border-color: #D8BFD8 !important;
+}
+
+.contact .php-email-form .form-range::-moz-range-thumb {
+    background: #DA70D6;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+}
+
+.contact .php-email-form .form-range::-webkit-slider-thumb {
+    -webkit-appearance: none; 
+    background: #DA70D6;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+}
