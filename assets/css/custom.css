@@ -517,3 +517,226 @@ section:nth-of-type(5) .container {
 output {
     color: #DA70D6;
 }
+
+
+.memory-game-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); 
+    grid-gap: 15px;
+    perspective: 1000px; 
+    max-width: 992px; 
+    margin: 50px auto;
+    padding: 20px;
+    border: 5px solid #FF00FF !important;
+    box-shadow: 0 0 50px #DA70D6, 0 0 50px #DA70D6 !important;
+    border-radius: 20px !important;
+    animation: gentle-float 4s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+}
+
+.memory-game-grid[style*="repeat(4, 1fr)"] {
+    max-width: 680px;
+}
+
+.memory-card {
+    width: 100%;
+    height: 120px; 
+    position: relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #00000F; 
+}
+
+.memory-card.disabled-card {
+    cursor: not-allowed;
+    pointer-events: none; 
+    opacity: 0.8;
+}
+
+.memory-card:active {
+    transform: scale(0.97);
+    transition: transform 0.2s;
+}
+
+.memory-card.flip {
+    transform: rotateY(180deg);
+}
+
+.front-face, .back-face {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    position: absolute;
+    border-radius: 10px;
+    backface-visibility: hidden; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    border: 3px solid #D8BFD8;
+    background-color: #00000F;
+}
+
+.front-face {
+    transform: rotateY(180deg); 
+}
+
+.back-face {
+    background-color: #DA70D6; 
+    color: #00000F;
+    border: 3px solid #FF00FF;
+}
+
+.memory-card.matched .front-face {
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.8), inset 0 0 10px rgba(255, 0, 255, 0.5);
+}
+
+.game-controls {
+    flex-wrap: wrap;
+}
+
+.btn-difficulty {
+    color: #D8BFD8 !important;
+    border-color: #DA70D6 !important;
+    background-color: transparent !important;
+    font-family: Courier, 'Courier New', monospace !important;
+    font-weight: bold !important;
+}
+
+.btn-difficulty:hover, .btn-difficulty.active {
+    background-color: #DA70D6 !important;
+    color: #00000F !important;
+    border-color: #FF00FF !important;
+}
+
+.btn-start, .btn-reset {
+    font-family: Courier, 'Courier New', monospace !important;
+    font-weight: bold !important;
+    color: #00000F !important;
+    background-color: #FF00FF !important;
+    border: 2px solid #FF00FF !important;
+    transition: all 0.3s ease;
+}
+
+.btn-reset {
+    background-color: #DA70D6 !important;
+    border-color: #DA70D6 !important;
+}
+
+.btn-start:hover {
+    background-color: #DA70D6 !important;
+    border-color: #FF00FF !important;
+    box-shadow: 0 0 10px #DA70D6;
+}
+
+.btn-reset:hover {
+    background-color: #FF00FF !important;
+    border-color: #DA70D6 !important;
+    box-shadow: 0 0 10px #FF00FF;
+}
+
+.game-stats {
+    border: 2px dashed #DA70D6;
+    border-radius: 10px;
+    max-width: 992px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.stat-item {
+    color: #D8BFD8;
+    font-size: 18px;
+    font-family: Courier, 'Courier New', monospace !important;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.stat-item i {
+    color: #FF00FF;
+    font-size: 24px;
+}
+
+.stat-item strong {
+    color: #FF00FF;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+}
+
+@media (max-width: 768px) {
+    .memory-game-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        grid-gap: 10px;
+    }
+    .memory-card {
+        height: 80px;
+    }
+    .front-face, .back-face {
+        font-size: 30px;
+    }
+    .game-stats {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 10px;
+    }
+}
+
+.win-message {
+    background: #000018;
+    border: 5px solid #FF00FF;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.7);
+    padding: 30px;
+    margin-bottom: 40px;
+    animation: neon-pulse 1.5s infinite alternate;
+}
+
+.win-message h2 {
+    text-shadow: 0 0 5px #FF00FF, 0 0 10px #FF00FF;
+}
+
+.win-message p {
+    font-family: Courier, 'Courier New', monospace;
+    font-size: 1.25rem;
+    line-height: 1.6;
+}
+
+.win-message strong {
+    color: #DA70D6 !important;
+    text-shadow: 0 0 3px #DA70D6;
+}
+
+@keyframes neon-pulse {
+    from {
+        box-shadow: 0 0 15px rgba(255, 0, 255, 0.5), 0 0 5px rgba(218, 112, 214, 0.3);
+    }
+    to {
+        box-shadow: 0 0 25px rgba(255, 0, 255, 0.9), 0 0 10px rgba(218, 112, 214, 0.5);
+    }
+}
+
+#best-scores-block {
+    max-width: 992px; 
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+}
+
+#best-scores-block h3 {
+    font-family: Courier, 'Courier New', monospace !important;
+    font-weight: bold !important;
+    font-size: 22px !important; 
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #DA70D6;
+    margin-bottom: 15px !important;
+}
+
+#best-scores-block .stat-item strong {
+    font-size: 22px; 
+}
